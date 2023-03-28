@@ -54,6 +54,7 @@ export function CarritoContextProvider({ children }) {
         isInCarrito,
         removeItemFromCarrito,
         getPriceInCarrito,
+        getCountInCarrito
       }}
     >
       {children}

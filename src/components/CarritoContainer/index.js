@@ -32,9 +32,9 @@ function CarritoContainer() {
                 </td>
                 <td>{products.nombre}</td>
                 <td>$ {products.precio}</td>
-                <td>{products.cantidad}</td>                
+                <td>{count}</td>                
                 <td>
-                <Button color="#c63224" onClick={() => removeItemFromCarrito(products.id)}>X</Button>
+                <Button color="#c63224" onTouchButton={() => removeItemFromCarrito(products.id)}>X</Button>
                 </td>
                 <th>$ {products.precio * products.cantidad}</th>
               </tr>

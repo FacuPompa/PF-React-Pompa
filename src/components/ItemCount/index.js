@@ -31,13 +31,7 @@ const ItemCount = ({ initial, stock, onAddToCarrito }) => {
       </div>
 
       <div className="itemcount_btns">
-        <Button
-          color="orange"
-          className="boton"
-          onTouchButton={() => onAddToCarrito(count)}
-        >
-          Agregar al carrito
-        </Button>
+        <Button color="orange" className="boton" onTouchButton={() => onAddToCarrito(count)}> Agregar al carrito </Button>
       </div>
     </div>
   );
