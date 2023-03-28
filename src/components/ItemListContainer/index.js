@@ -49,9 +49,9 @@ function ItemListContainer({ greeting }) {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const params = useParams();
-  const idEditorial = params.ideditorial;
-
+  const {idEditorial} = useParams();
+  
+console.log(idEditorial)
   async function leerDatos() {
     if (idEditorial === undefined) {
       let respuesta = await getItemsFromDatabase();
@@ -67,7 +67,7 @@ function ItemListContainer({ greeting }) {
   useEffect(() => {
     leerDatos();
   }, [idEditorial]);
-
+console.log(products)
   return (
     <div className="container">
       <h2>{greeting}</h2>

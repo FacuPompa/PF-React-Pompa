@@ -1,3 +1,12 @@
+.nav {
+  background-color:#212529 ;
+
+Nav, NavDropdown {
+  color: white;
+  }
+}
+
+
 .cart-widget {
   padding: 3px 7px;
   position: relative;
@@ -5,7 +14,7 @@
 
   .icon {
     font-size: 24px;
-    color: #000;
+    color: #eee;
   }
 
   .badge {
@@ -13,8 +22,8 @@
     top: -10px;
     right: -10px;
     padding: 1px 5px;
-    border-radius: 50%;
-    background: red;
+    border-radius: 20px;
+    background: orange;
     color: white;
     font-size: 14px;
   }

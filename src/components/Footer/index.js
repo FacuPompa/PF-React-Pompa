@@ -10,7 +10,7 @@ const Footer = ()=> {
                 <div className="container">
                     <nav className="row">
                         <Link to='/' className="col-9 col-md-4 d-flex aling-items-center justify-content-center">
-                            <img src="./tunel_icon.png" className="mx-2" height={80}/>
+                            <img src="/img/tunel_icon.png" className="mx-2" width={150}/>
                         </Link>
                         <ul className="col-9 col-md-4 list-unlysted">
                             <li className="font-weight-bold mb-2 list-unstyled text-center">El túnel del Cómic</li>
