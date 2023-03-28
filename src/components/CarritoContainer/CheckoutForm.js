@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../Button";
 
 export default function CheckoutForm(props) {
   const [userData, setUserData] = useState({
@@ -32,9 +33,9 @@ export default function CheckoutForm(props) {
 
   return (
     <div>
-      <h2>Ingresa tus datos para finalizar tu compra</h2>
-      <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Nombre</label>
+      <h2 style={{color: "#eee"}} >Ingresa tus datos para finalizar tu compra</h2>
+      <div className="div-checkout" >
+        <label className="label-checkout">Nombre:</label>
         <input
           value={userData.name}
           name="name"
@@ -44,8 +45,8 @@ export default function CheckoutForm(props) {
         />
       </div>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Email</label>
+      <div className="div-checkout">
+        <label className="label-checkout">Email:</label>
         <input
           value={userData.email}
           name="email"
@@ -55,8 +56,8 @@ export default function CheckoutForm(props) {
         />
       </div>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Phone</label>
+      <div className="div-checkout">
+        <label className="label-checkout">Teléfono:</label>
         <input
           value={userData.phone}
           name="phone"
@@ -65,7 +66,7 @@ export default function CheckoutForm(props) {
           onChange={handleChange}
         />
       </div>
-      <button
+      <Button
         disabled={
           !(
             userData.name !== "" &&
@@ -76,8 +77,8 @@ export default function CheckoutForm(props) {
         onClick={submitData}
       >
         Crear orden
-      </button>
-      <button onClick={clearForm}>Vaciar formulario</button>
+      </Button>
+      <Button className="boton-form" onClick={clearForm}>Vaciar formulario</Button>
     </div>
   );
 }

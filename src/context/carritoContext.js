@@ -25,13 +25,16 @@ export function CarritoContextProvider({ children }) {
   }
 
   function removeItemFromCarrito(id) {
-    setCarrito(carrito.filter((products) => products.id !== id));
+    const index = carrito.findIndex((product) => product.id === id);
+    if (index !== -1) {
+      const newCarrito = [...carrito];
+      newCarrito.splice(index, 1);
+      setCarrito(newCarrito);
+    }
   }
 
   function getCountInCarrito() {
-    let total = 0;
-    carrito.forEach((product) => total + product.count);
-    return total;
+    return carrito.reduce((accum, item) => accum = accum + item.count, 0);
   }
 
   function getPriceInCarrito() {

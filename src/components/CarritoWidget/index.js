@@ -2,11 +2,12 @@ import { BsFillCartFill } from "react-icons/bs";
 import "./styles.scss";
 import { useContext } from "react";
 import carritoContext from "../../context/carritoContext";
+import getCountInCarrito from "../../context/carritoContext"
 
 function CarritoWidget() {
-  const { carrito, test } = useContext(carritoContext);
+  const { carrito, getCountInCarrito } = useContext(carritoContext);
 
-  const carritoCount = carrito.length;
+  const carritoCount = getCountInCarrito();
   return (
     <span className="cart-widget nav">
       <BsFillCartFill className="icon" />
