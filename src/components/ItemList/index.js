@@ -2,14 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button";
 import Favorite from "../Favorite";
-import Item from "react";
+import products from "../products/products";
 
-export default function ItemList({ products }) {
+export default function ItemList(props) {
+  return <li>{props.nombre}</li>
+  {products.map((product) => )}
+  
+}
+
+/* export default function ItemList({ products ) {
   return (
     <div className="item-list-container">
       <ul className="item-list">
         {products.map((product) => (
-          <Item>
           <li
             style={{ color: product.stock === 0 ? "#ee0033" : "#151515" }}
             className="item-card"
@@ -25,9 +30,8 @@ export default function ItemList({ products }) {
               <Button>Ver Detalles</Button>
             </Link>
           </li>
-          </Item>
         ))}
       </ul>
     </div>
   );
-}
+} */
