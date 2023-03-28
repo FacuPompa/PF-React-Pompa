@@ -28,11 +28,11 @@ function CarritoContainer() {
             return (
               <tr key={products.id} className="carritoList_row">
                 <td>
-                  <img width={250} height={350} src={products.imagen} alt={products.nombre} />
+                  <img className="img-final" width={250} height={350} src={products.imagen} alt={products.nombre} />
                 </td>
                 <td>{products.nombre}</td>
                 <td>$ {products.precio}</td>
-                <td>{count}</td>                
+                <td>{products.count}</td>                
                 <td>
                 <Button color="#c63224" onTouchButton={() => removeItemFromCarrito(products.id)}>X</Button>
                 </td>
