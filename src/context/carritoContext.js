@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import products from "../components/products/products";
 
 const carritoContext = createContext({ carrito: [] });
 const Provider = carritoContext.Provider;
@@ -6,7 +7,7 @@ const Provider = carritoContext.Provider;
 export function CarritoContextProvider({ children }) {
   const [carrito, setCarrito] = useState([]);
 
-  function addProduct(product, count) {
+  function addItem(product, count) {
     const newCarrito = JSON.parse(JSON.stringify(carrito));
 
     if (isInCarrito(product.id)) {
@@ -23,12 +24,8 @@ export function CarritoContextProvider({ children }) {
 
   }
 
-  function removeproductFromCarrito(id) {
-    /* eliminar/filtrar products con id recibido */
-    /* ESTO ESTÁ MALLL  */
-    const newCarrito = JSON.parse(JSON.stringify(carrito));
-    newCarrito.pop();
-    setCarrito(newCarrito);
+  function removeItemFromCarrito(id) {
+    setCarrito(carrito.filter((products) => products.id !== id));
   }
 
   function getCountInCarrito() {
@@ -38,7 +35,10 @@ export function CarritoContextProvider({ children }) {
   }
 
   function getPriceInCarrito() {
-    return 5600;
+    const total = carrito.reduce((accumulator, currentProduct) => {
+      return accumulator + currentProduct.precio * currentProduct.cantidad;
+    }, 0);
+    return total.toFixed(2);
   }
 
   function isInCarrito(id) {
@@ -49,10 +49,10 @@ export function CarritoContextProvider({ children }) {
     <Provider
       value={{
         carrito,
-        addProduct,
+        addItem,
         test: "ok",
         isInCarrito,
-        removeproductFromCarrito,
+        removeItemFromCarrito,
         getPriceInCarrito,
       }}
     >

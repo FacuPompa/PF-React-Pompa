@@ -6,11 +6,11 @@ import CheckoutCarrito from "./CheckoutCarrito";
 import "./styles.scss";
 
 function CarritoContainer() {
-  const { carrito, removeItemFromCarrito, obtenerPrecioCarrito } = useContext(carritoContext);
+  const { carrito, removeItemFromCarrito, getPriceInCarrito } = useContext(carritoContext);
 
   return (
     <>
-      <h1>Tu Carrito</h1>
+      <h1 className="titl-carrito">Tu Carrito</h1>
 
       <table className="carritoList">
         <thead className="carritoList_head">
@@ -28,15 +28,15 @@ function CarritoContainer() {
             return (
               <tr key={products.id} className="carritoList_row">
                 <td>
-                  <img height={50} src={products.imagen} alt={products.nombre} />
+                  <img width={250} height={350} src={products.imagen} alt={products.nombre} />
                 </td>
                 <td>{products.nombre}</td>
                 <td>$ {products.precio}</td>
-                <td>{products.stock}</td>                
+                <td>{products.cantidad}</td>                
                 <td>
-                  <Button color="#c63224">X</Button>
+                <Button color="#c63224" onClick={() => removeItemFromCarrito(products.id)}>X</Button>
                 </td>
-                <th>$0</th>
+                <th>$ {products.precio * products.cantidad}</th>
               </tr>
             );
           })}
@@ -44,10 +44,10 @@ function CarritoContainer() {
       </table>
         
       <div className="cartList_detail">
-        <h4>El total de tu compra es de ${obtenerPrecioCarrito()}</h4>
+        <h4>El total de tu compra es de ${getPriceInCarrito()}</h4>
       </div>
 
-      <CheckoutCarrito total={obtenerPrecioCarrito()} cart={carrito}/>
+      <CheckoutCarrito total={getPriceInCarrito()} cart={carrito}/>
     </>
   );
 }

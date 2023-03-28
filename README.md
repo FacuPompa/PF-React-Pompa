@@ -1,73 +1,108 @@
-# ReactJS E-commerce
+# El túnel del Cómic
 
-E-commerce created with ReactJS
+_Este es un ecommerce hecho para El túnel del Cómic, una tienda de comics y mangas ubicada en Ramos Mejía, Buenos Aires, Argentina_
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+_Para iniciar el proyecto, abre tu editor de código y en una consola ejecuta los siguientes comandos:
+ npm install
+ npm start_
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pre-requisitos 📋
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+_Para abrir este proyecto, necesitas tener instalado un editor de código (visual studio code, sublime text, notepad, atom, etc)
+Luego deberás tener instalado NodeJS, la versión estable, no la mas reciente
+Una vez eso descargado iniciamos el proyecto como está explicado en  **Comenzando**_
 
-### `npm test`
+```
+Da un ejemplo
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Instalación 🔧
 
-### `npm run build`
+_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Dí cómo será ese paso_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+Da un ejemplo
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_Y repite_
 
-### `npm run eject`
+```
+hasta finalizar
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Ejecutando las pruebas ⚙️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+_Explica como ejecutar las pruebas automatizadas para este sistema_
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Analice las pruebas end-to-end 🔩
 
-## Learn More
+_Explica que verifican estas pruebas y por qué_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+Da un ejemplo
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Y las pruebas de estilo de codificación ⌨️
 
-### Code Splitting
+_Explica que verifican estas pruebas y por qué_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+Da un ejemplo
+```
 
-### Analyzing the Bundle Size
+## Despliegue 📦
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_Agrega notas adicionales sobre como hacer deploy_
 
-### Making a Progressive Web App
+## Construido con 🛠️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+_Menciona las herramientas que utilizaste para crear tu proyecto_
 
-### Advanced Configuration
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
+* [Maven](https://maven.apache.org/) - Manejador de dependencias
+* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contribuyendo 🖇️
 
-### Deployment
+Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Wiki 📖
 
-### `npm run build` fails to minify
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-#� �P�r�e�e�n�t�r�e�g�a�2�-�r�e�a�c�t�-�p�o�m�p�a�
-�
-�
+## Versionado 📌
+
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+
+## Autores ✒️
+
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+
+* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
+* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
+## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
+* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
+* etc.
+
+
+
+---
+⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊

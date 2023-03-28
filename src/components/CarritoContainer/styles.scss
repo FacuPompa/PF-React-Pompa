@@ -1,15 +1,17 @@
 .carritoList{
   border-spacing: 0;
   border-radius: 5px;
-  border: solid 1px rgb(233, 244, 75);  
+  border: solid 1px darkorange;  
   width: 95%;
   margin: 15px auto;
   text-align: center;
   box-shadow: 0px 0px 8px rgba(0,0,0,0.15);
+  background-color: #eee;
+  
 }
 
 .carritoList_head{
-  background-color: rgb(233, 244, 75);;
+  background-color: orange;
   margin: 8px auto;
 }
 
@@ -22,4 +24,15 @@
   text-align: center;
   line-height: 1.5em;
   width: 100%;
+}
+
+.titl-carrito {
+  text-align: center;
+  background-color: #212529;
+  color: #eee;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
 }
