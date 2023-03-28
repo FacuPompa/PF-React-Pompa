@@ -1,11 +1,11 @@
 import React from "react";
 import {Item} from "../Item/index";
-import products from "../products/products";
+
 
 export default function ItemList(props) {
   return (
 <div>
-{props.products.map((products)=><Item key={products.id} products={products}/>)}
+{props.products.map((product)=><Item key={product.id} product={product}/>)}
 </div>
 )
   

@@ -9,9 +9,9 @@ function Button(props) {
   };
 
   return (
-    <Button className="btn" style={stylesButton} onClick={props.onTouchButton}>
+    <button className="btn" style={stylesButton} onClick={props.onTouchButton}>
       {props.children}
-    </Button>
+    </button>
   );
 }
 
