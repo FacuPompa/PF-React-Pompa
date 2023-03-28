@@ -13,7 +13,7 @@ export function Item(props) {
       <br />
       {props.product.stock === 0 && <small>No hay stock</small>}
           <h4>{`${props.product.nombre}`}</h4>
-          <small>{`${props.product.nombre}`} </small>
+          <small>{`${props.product.editorial}`} </small>
       <br />
           <Link to={`/detalle/${props.product.id}`}>
             <Button>Ver Detalles</Button>

@@ -5,11 +5,18 @@
 }
 
 .item-card {
+  text-align: center;
     width: 23%;
     margin-bottom: 30px;
     background-color: #eee;
     padding: 15px;
     border-radius: 10px;
+    
+    img {
+      display: block;
+      margin: auto;
+      height: 320px;
+    }
 }
 
 @media (max-width: 990px) {

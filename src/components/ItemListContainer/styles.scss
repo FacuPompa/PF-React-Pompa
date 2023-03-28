@@ -19,9 +19,15 @@
     transform: translateY(-5px);
   }
   
-  h2 {
-    text-align: center;
-    color: blue;
-    font-size: 36px;
-  }
+}
+.h2-prod {
+  text-align: center;
+  color: #eee;
+  font-size: 32px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #212529;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 15px;
 }

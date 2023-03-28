@@ -7,10 +7,19 @@ import Prueba from "./pages/Prueba";
 import NotFound from "./pages/NotFound";
 import { CarritoContextProvider } from "./context/carritoContext";
 import CarritoContainer from "./components/CarritoContainer";
+import { useEffect, useState } from "react";
+import Loader from "./components/Loader";
+
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  },[]);
   return (
     <div className="container">
+      {isLoading ? <Loader />: 
       <CarritoContextProvider>
         <BrowserRouter>
         <NavBar />
@@ -39,6 +48,7 @@ function App() {
       <Footer/>
       </BrowserRouter>
       </CarritoContextProvider>
+      }
     </div>
   );
 }

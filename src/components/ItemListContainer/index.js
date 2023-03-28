@@ -70,7 +70,7 @@ console.log(idEditorial)
 console.log(products)
   return (
     <div className="container">
-      <h2>{greeting}</h2>
+      <h2 className="h2-prod" >Estos son los mangas de la editorial {idEditorial}</h2>
       {isLoading ? <Loader color="orange" /> : <ItemList products={products} />}
     </div>
   );
