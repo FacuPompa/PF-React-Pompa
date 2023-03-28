@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Button from "../Button";
-import Favorite from "../Favorite";
+import {Item} from "../Item/index";
 import products from "../products/products";
 
 export default function ItemList(props) {
-  return <li>{props.nombre}</li>
-  {products.map((product) => )}
+  return (
+<div>
+{props.products.map((products)=><Item key={products.id} products={products}/>)}
+</div>
+)
   
 }
 

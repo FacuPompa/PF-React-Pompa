@@ -7,12 +7,10 @@ import Prueba from "./pages/Prueba";
 import NotFound from "./pages/NotFound";
 import { CarritoContextProvider } from "./context/carritoContext";
 import CarritoContainer from "./components/CarritoContainer";
-import {exportData, exportDataWithBatch} from "./services/firestore"
 
 function App() {
   return (
     <div className="container">
-      <button onClick={exportData}> export </button>
       <CarritoContextProvider>
         <BrowserRouter>
         <NavBar />
