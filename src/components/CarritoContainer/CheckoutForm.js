@@ -78,7 +78,7 @@ export default function CheckoutForm(props) {
       >
         Crear orden
       </Button>
-      <Button className="boton-form" onClick={clearForm}>Vaciar formulario</Button>
+      <Button className="boton-form" onClick={clearForm}>Borrar datos</Button>
     </div>
   );
 }

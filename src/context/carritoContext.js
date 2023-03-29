@@ -25,13 +25,10 @@ export function CarritoContextProvider({ children }) {
   }
 
   function removeItemFromCarrito(id) {
- /*    const deleteItem = carrito.filter(product => product.id !== id)
-    setCarrito(deleteItem); */
-    console.log(id);
+    setCarrito(carrito.filter(product => product.id !== id))
+  console.log(id);
+  }
     
-
-    }
-  
 
   function getCountInCarrito() {
     return carrito.reduce((accum, item) => accum = accum + item.count, 0);
@@ -43,6 +40,7 @@ export function CarritoContextProvider({ children }) {
     }, 0);
     return total.toFixed(2);
   }
+  
 
   function isInCarrito(id) {
     return carrito.some((product) => product.id === id);
@@ -63,7 +61,9 @@ export function CarritoContextProvider({ children }) {
       {children}
     </Provider>
   );
-}
+    }
+    
+
     
 
 export default carritoContext;
