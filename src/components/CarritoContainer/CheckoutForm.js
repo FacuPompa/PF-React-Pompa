@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Button from "../Button";
+import { db } from '../../services/firestore';
 
 export default function CheckoutForm(props) {
   const [userData, setUserData] = useState({
-    name: "",
+    nombre: "",
     email: "",
     phone: "",
   });
@@ -21,15 +22,25 @@ export default function CheckoutForm(props) {
 
   function clearForm() {
     setUserData({
-      name: "",
+      nombre: "",
       email: "",
       phone: "",
     });
   }
 
-  function submitData(){
-    props.onSubmit(userData)
+
+
+  function submitData() {
+    db.collection("orders").add(userData)
+      .then(() => {
+        console.log("La orden se agregó correctamente a Firebase");
+      })
+      .catch((error) => {
+        console.error("Error al agregar la orden a Firebase: ", error);
+      });
   }
+
+
 
   return (
     <div>
@@ -37,8 +48,8 @@ export default function CheckoutForm(props) {
       <div className="div-checkout" >
         <label className="label-checkout">Nombre:</label>
         <input
-          value={userData.name}
-          name="name"
+          value={userData.nombre}
+          name="nombre"
           type="text"
           required
           onChange={handleChange}
