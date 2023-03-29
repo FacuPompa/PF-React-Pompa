@@ -7,6 +7,7 @@ const Provider = carritoContext.Provider;
 export function CarritoContextProvider({ children }) {
   const [carrito, setCarrito] = useState([]);
 
+ 
   function addItem(product, count) {
     const newCarrito = JSON.parse(JSON.stringify(carrito));
 
@@ -23,19 +24,18 @@ export function CarritoContextProvider({ children }) {
   function clearCarrito() {
 
   }
-
-  function removeItemFromCarrito(id) {
-    const modificarProductoPorId = (id, nuevaPropiedad) => {
-      const productoModificado = products.map(products => {
-        if (products.id === id) {
-          return {...products, propiedad: nuevaPropiedad};
-        }
-        return products;
-      });
-      products(productoModificado);
-    };
-}
     
+  const removeItemFromCarrito = (productId) => {
+    const newCarrito = carrito.filter((product) => product.id !== productId);
+    setCarrito(newCarrito);
+  };
+
+  return(
+    <CarritoContextProvider value ={{carrito, removeItemFromCarrito}}>
+      {children}
+      </CarritoContextProvider>
+  );
+
 
   function getCountInCarrito() {
     return carrito.reduce((accum, item) => accum = accum + item.count, 0);
