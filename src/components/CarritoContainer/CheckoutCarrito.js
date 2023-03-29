@@ -6,21 +6,21 @@ import CheckoutForm from "./CheckoutForm";
 function CheckoutCarrito({ carrito, total }) {
   const navigateTo = useNavigate();
 
-  async function handleCheckout(userData) {
-    const orderData = {
+   function handleCheckout(userData) {
+    let orderData = {
       buyer: userData,
       items: carrito,
       total: total,
       timestamp: new Date(),
     };
-    const id = await createOrder(orderData);
-
-    navigateTo(`/checkout/${id}`);
+    const id = createOrder(orderData);
+     console.log(id)
+   
   }
 
   return (
     <div>
-      <CheckoutForm onSubmit={handleCheckout} />
+      <CheckoutForm handleCheckout={handleCheckout} />
     </div>
   );
 }

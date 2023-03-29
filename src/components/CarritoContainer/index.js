@@ -47,7 +47,7 @@ function CarritoContainer() {
         <h4>El total de tu compra es de ${getPriceInCarrito()}</h4>
       </div>
 
-      <CheckoutCarrito total={getPriceInCarrito()} cart={carrito}/>
+      <CheckoutCarrito total={getPriceInCarrito()} carrito={carrito}/>
     </>
   );
 }

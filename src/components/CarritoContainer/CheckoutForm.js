@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../Button";
 import { db } from '../../services/firestore';
 
-export default function CheckoutForm(props) {
+export default function CheckoutForm({handleCheckout}) {
   const [userData, setUserData] = useState({
     nombre: "",
     email: "",
@@ -30,15 +30,7 @@ export default function CheckoutForm(props) {
 
 
 
-  function submitData() {
-    db.collection("orders").add(userData)
-      .then(() => {
-        console.log("La orden se agregó correctamente a Firebase");
-      })
-      .catch((error) => {
-        console.error("Error al agregar la orden a Firebase: ", error);
-      });
-  }
+ 
 
 
 
@@ -78,18 +70,12 @@ export default function CheckoutForm(props) {
         />
       </div>
       <Button
-        disabled={
-          !(
-            userData.name !== "" &&
-            userData.phone !== "" &&
-            userData.email !== ""
-          )
-        }
-        onClick={submitData}
+        
+        onTouchButton={()=>handleCheckout(userData)}
       >
         Crear orden
       </Button>
-      <Button className="boton-form" onClick={clearForm}>Borrar datos</Button>
+      <Button className="boton-form" oonTouchButton={clearForm}>Borrar datos</Button>
     </div>
   );
 }
