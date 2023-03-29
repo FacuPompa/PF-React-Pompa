@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
+import products from "../components/products/products";
 
 const carritoContext = createContext({ carrito: [] });
 const Provider = carritoContext.Provider;
-
 
 export function CarritoContextProvider({ children }) {
   const [carrito, setCarrito] = useState([]);
@@ -19,14 +19,17 @@ export function CarritoContextProvider({ children }) {
       newCarrito.push({ ...product, count });
     }
     setCarrito(newCarrito);
-  }  
-  
+  }
 
-  return(
-    <CarritoContextProvider value ={{carrito, removeItemFromCarrito}}>
-      {children}
-      </CarritoContextProvider>
-  );
+  function clearCarrito() {
+
+  }
+    
+  const removeItemFromCarrito = (productId) => {
+    const newCarrito = carrito.filter((product) => product.id !== productId);
+    setCarrito(newCarrito);
+  };
+
 
 
   function getCountInCarrito() {
@@ -40,11 +43,6 @@ export function CarritoContextProvider({ children }) {
     return total.toFixed(2);
   }
   
-  function removeItemFromCarrito(id) {
-    setCarrito(carrito.filter(product => product.id !== id))
-  console.log(id);
-  }
-
 
   function isInCarrito(id) {
     return carrito.some((product) => product.id === id);
@@ -65,10 +63,9 @@ export function CarritoContextProvider({ children }) {
       {children}
     </Provider>
   );
-}
+    }
     
 
     
 
 export default carritoContext;
-
