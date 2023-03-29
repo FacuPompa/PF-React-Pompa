@@ -25,9 +25,16 @@ export function CarritoContextProvider({ children }) {
   }
 
   function removeItemFromCarrito(id) {
-    setCarrito(carrito.filter(product => product.id !== id))
-  console.log(id);
-  }
+    const modificarProductoPorId = (id, nuevaPropiedad) => {
+      const productoModificado = products.map(products => {
+        if (products.id === id) {
+          return {...products, propiedad: nuevaPropiedad};
+        }
+        return products;
+      });
+      products(productoModificado);
+    };
+}
     
 
   function getCountInCarrito() {

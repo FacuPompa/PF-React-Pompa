@@ -1,5 +1,7 @@
 # El túnel del Cómic
 
+[![tunel-icon.png](https://i.postimg.cc/kMt7jQ51/tunel-icon.png)](https://postimg.cc/nMp8rQBB)
+
 _Este es un ecommerce hecho para El túnel del Cómic, una tienda de comics y mangas ubicada en Ramos Mejía, Buenos Aires, Argentina_
 
 ## Comenzando 🚀
