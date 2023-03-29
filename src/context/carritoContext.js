@@ -25,13 +25,13 @@ export function CarritoContextProvider({ children }) {
   }
 
   function removeItemFromCarrito(id) {
-    const index = carrito.findIndex((product) => product.id === id);
-    if (index !== -1) {
-      const newCarrito = [...carrito];
-      newCarrito.splice(index, 1);
-      setCarrito(newCarrito);
+ /*    const deleteItem = carrito.filter(product => product.id !== id)
+    setCarrito(deleteItem); */
+    console.log(id);
+    
+
     }
-  }
+  
 
   function getCountInCarrito() {
     return carrito.reduce((accum, item) => accum = accum + item.count, 0);
@@ -39,7 +39,7 @@ export function CarritoContextProvider({ children }) {
 
   function getPriceInCarrito() {
     const total = carrito.reduce((accumulator, currentProduct) => {
-      return accumulator + currentProduct.precio * currentProduct.cantidad;
+      return accumulator + currentProduct.precio * currentProduct.count;
     }, 0);
     return total.toFixed(2);
   }
@@ -64,6 +64,7 @@ export function CarritoContextProvider({ children }) {
     </Provider>
   );
 }
+    
 
 export default carritoContext;
 

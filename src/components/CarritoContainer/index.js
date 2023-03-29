@@ -36,14 +36,14 @@ function CarritoContainer() {
                 <td>
                 <Button color="#c63224" onTouchButton={() => removeItemFromCarrito(products.id)}>X</Button>
                 </td>
-                <th>$ {products.precio * products.cantidad}</th>
+                <th>$ {products.precio * products.count}</th>
               </tr>
             );
           })}
         </tbody>
       </table>
         
-      <div className="cartList_detail">
+      <div style={{color: "#eee"}} className="cartList_detail">
         <h4>El total de tu compra es de ${getPriceInCarrito()}</h4>
       </div>
 

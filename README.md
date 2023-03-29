@@ -15,59 +15,20 @@ _Para abrir este proyecto, necesitas tener instalado un editor de código (visua
 Luego deberás tener instalado NodeJS, la versión estable, no la mas reciente
 Una vez eso descargado iniciamos el proyecto como está explicado en  **Comenzando**_
 
-```
-Da un ejemplo
-```
-
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
-
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Html 5
+Bootstrap
+Sass
+JavaScript
+React.JS
+_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Html5](https://lenguajehtml.com/html/) - Utilizado para estructurar y presentar contenido
+* [Bootstrap](https://getbootstrap.com/) - Framework de CSS/SASS
+* [Sass](https://sass-lang.com/) - Usado para editar los estilos del HTML
+* [JavaScript] (https://developer.mozilla.org/es/docs/Web/JavaScript) - Lenguaje de programación compilado con funciones de primera clase
+* [React.JS] (https://react-bootstrap.github.io/) - Framework de Java Script
 
 ## Contribuyendo 🖇️
 
@@ -89,20 +50,3 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 * **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
-
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
