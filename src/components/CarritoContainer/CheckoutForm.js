@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import { db } from '../../services/firestore';
+import Swal from 'sweetalert2';
 
-export default function CheckoutForm({handleCheckout}) {
+export default function CheckoutForm({ handleCheckout }) {
   const [userData, setUserData] = useState({
     nombre: "",
     email: "",
     phone: "",
   });
-
-  console.log(userData);
 
   function handleChange(evt) {
     const value = evt.target.value;
@@ -28,16 +27,33 @@ export default function CheckoutForm({handleCheckout}) {
     });
   }
 
-
-
- 
-
-
+  function handleCreateOrder(userData) {
+    // Agrega los detalles de la orden a la base de datos de Firebase
+    db.collection("orders").add({
+      nombre: userData.nombre,
+      email: userData.email,
+      phone: userData.phone,
+    }).then(function(docRef) {
+      // Muestra una alerta con el ID de la compra utilizando Sweet Alert
+      Swal.fire({
+        title: "Compra completada",
+        text: "El ID de la compra es: " + docRef.id,
+        icon: "success",
+      });
+    }).catch(function(error) {
+      // Muestra una alerta si ocurre un error
+      Swal.fire({
+        title: "Error",
+        text: "Ha ocurrido un error: " + error.message,
+        icon: "error",
+      });
+    });
+  }
 
   return (
     <div>
-      <h2 style={{color: "#eee"}} >Ingresa tus datos para finalizar tu compra</h2>
-      <div className="div-checkout" >
+      <h2 style={{ color: "#eee" }}>Ingresa tus datos para finalizar tu compra</h2>
+      <div className="div-checkout">
         <label className="label-checkout">Nombre:</label>
         <input
           value={userData.nombre}
@@ -69,13 +85,8 @@ export default function CheckoutForm({handleCheckout}) {
           onChange={handleChange}
         />
       </div>
-      <Button
-        
-        onTouchButton={()=>handleCheckout(userData)}
-      >
-        Crear orden
-      </Button>
-      <Button className="boton-form" oonTouchButton={clearForm}>Borrar datos</Button>
+      <Button onTouchButton={() => handleCreateOrder(userData)}>Crear orden</Button>
+      <Button className="boton-form" onTouchButton={clearForm}>Borrar datos</Button>
     </div>
   );
 }
