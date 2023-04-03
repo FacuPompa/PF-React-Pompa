@@ -28,20 +28,17 @@ export default function CheckoutForm({ handleCheckout }) {
   }
 
   function handleCreateOrder(userData) {
-    // Agrega los detalles de la orden a la base de datos de Firebase
     db.collection("orders").add({
       nombre: userData.nombre,
       email: userData.email,
       phone: userData.phone,
     }).then(function(docRef) {
-      // Muestra una alerta con el ID de la compra utilizando Sweet Alert
       Swal.fire({
         title: "Compra completada",
         text: "El ID de la compra es: " + docRef.id,
         icon: "success",
       });
     }).catch(function(error) {
-      // Muestra una alerta si ocurre un error
       Swal.fire({
         title: "Error",
         text: "Ha ocurrido un error: " + error.message,
