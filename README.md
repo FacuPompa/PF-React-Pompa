@@ -23,8 +23,8 @@ Una vez eso descargado iniciamos el proyecto como está explicado en  **Comenzan
 * [Html5](https://lenguajehtml.com/html/) - Utilizado para estructurar y presentar contenido
 * [Bootstrap](https://getbootstrap.com/) - Framework de CSS/SASS
 * [Sass](https://sass-lang.com/) - Usado para editar los estilos del HTML
-* [JavaScript] (https://developer.mozilla.org/es/docs/Web/JavaScript) - Lenguaje de programación compilado con funciones de primera clase
-* [React.JS] (https://react-bootstrap.github.io/) - Framework de Java Script
+* [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Lenguaje de programación compilado con funciones de primera clase
+* [React.JS](https://react-bootstrap.github.io/) - Framework de Java Script
 
 
 ## Autor ✒️
