@@ -6,10 +6,10 @@ _Este es un ecommerce hecho para El túnel del Cómic, una tienda de comics y ma
 
 ## Comenzando 🚀
 
-_Para iniciar el proyecto, abre tu editor de código y en una consola ejecuta los siguientes comandos:
+Para iniciar el proyecto, abre tu editor de código y en una consola ejecuta los siguientes comandos:
  * npm install
  * npm start
- * Si únicamente quieres abrir el proyecto para visualizarlo, puedes entrar a este link de Vercel: https://vercel.com/facupompa/pf-react-pompa_
+ * Si únicamente quieres abrir el proyecto para visualizarlo, puedes entrar a este link de Vercel: https://vercel.com/facupompa/pf-react-pompa
 
 
 ### Pre-requisitos 📋
